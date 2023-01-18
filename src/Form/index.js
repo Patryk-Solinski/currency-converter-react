@@ -14,10 +14,10 @@ const Form = () => {
     };
 
     return (
-        <form onSubmit={onFormSubmit}>
+        <form className= "form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <p>
-                    <label>
+                    <label className="form__label">
                         <span className="form__labelText">
                             Kwota do wymainy (PLN):
                         </span>
@@ -33,7 +33,7 @@ const Form = () => {
                     </label>
                 </p>
                 <p>
-                    <label>
+                    <label className="form__label">
                         <span className="form__labelText">
                             Waluta:</span>
                         <select
