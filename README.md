@@ -11,7 +11,7 @@ This is another version of currency converter created as part of YouCode course.
 ## How it works
 At the beginning you need to enter your amount of money in PLN, then you can select the currency from the list you want to convert into. The result will be automaticlly render bellow the form.
 
-![Curency-converter](https://github.com/Patryk-Solinski/currency-converter/blob/master/images/currency-converter.gif?raw=true)
+![Curency-converter](https://github.com/Patryk-Solinski/currency-converter-react/blob/master/public/currency-converter-react.gif?raw=true)
 
 
 This project was bootstrapped with [Create React App.](https://github.com/facebook/create-react-app)
