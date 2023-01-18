@@ -1,13 +1,16 @@
 import "./style.css";
 import { useState } from "react";
 import { currencies } from "../currencies";
+import Result from "../Result";
+
 
 
 
 
 const Form = () => {
     const [amount, setAmount] = useState("");
-    const [currency, setCurrency] = useState("");
+    const [currency, setCurrency] = useState(currencies[0].code);
+    const rate = currencies.find(({code})=> code === currency).rate;
 
 
 const onFormSubmit = (event) => {
@@ -28,8 +31,8 @@ return (
                     onChange={({ target }) => setAmount(target.value)}
                     className="form__field"
                     type="number"
-                    step="any"
-                    min="1"
+                    step="0.01"
+                    min="0.01"
                     required
                 />
             </label>
@@ -58,13 +61,17 @@ return (
 
     </fieldset>
     <div className="form__container">
-        <button
+        {/* <button
 
             className="form__button "
             type="submit">
             Przelicz
-        </button>
-        <p className="form__paragraphResult "></p>
+        </button> */}
+        <Result 
+        amount={amount}
+        rate={rate}
+        currency={currency}
+        />
     </div>
 </form>
 )
