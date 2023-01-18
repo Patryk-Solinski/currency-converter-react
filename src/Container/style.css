@@ -1,0 +1,7 @@
+.container {
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 10px 20px;
+    background-color: hsl(240, 44%, 93%, 0.85);
+    border-radius: 10px;
+}
