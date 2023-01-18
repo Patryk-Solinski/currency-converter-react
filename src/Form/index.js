@@ -41,11 +41,17 @@ return(
                 <select 
                 value={currency}
                 onChange={({target})=> setCurrency(target.value)}
-                className="form__field">
-                    <option value="EUR">EUR</option>
-                    <option value="GBP">GBP</option>
-                    <option value="USD">USD</option>
-                    <option value="CHF">CHF</option>
+                className="form__field"
+                >
+                {currencies.map((currency)=>(
+                    <option
+                    key={currency.code}
+                    value={currency.code}>
+                        {currency.name}
+                     </option>
+                ))}
+                    
+                   
                 </select>
             </label>
         </p>
