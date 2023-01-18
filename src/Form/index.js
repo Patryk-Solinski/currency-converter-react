@@ -7,6 +7,7 @@ import { currencies } from "../currencies";
 
 const Form = () => {
     const [amount, setAmount] = useState("");
+    const [currency, setCurrency] = useState("");
 
 
 const onFormSubmit = (event) => {
@@ -37,7 +38,10 @@ return(
             <label>
                 <span className="form__labelText">
                     Waluta:</span>
-                <select name="currency" className="form__field">
+                <select 
+                value={currency}
+                onChange={({target})=> setCurrency(target.value)}
+                className="form__field">
                     <option value="EUR">EUR</option>
                     <option value="GBP">GBP</option>
                     <option value="USD">USD</option>
