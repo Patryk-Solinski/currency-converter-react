@@ -10,6 +10,8 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
   min-height: 100vh;
   background-image: url("../public/backgroundTower.jpg");
   background-repeat: no-repeat;
