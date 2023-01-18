@@ -1,6 +1,6 @@
 # To-do list react
 
-![To-do list react](https://github.com/Patryk-Solinski/todo-list-react/blob/master/public/website_todo-list-react.png?raw=true)
+![To-do list react](https://github.com/Patryk-Solinski/currency-converter-react/blob/master/public/currency-converter3.png?raw=true)
 
 ## Demo
 [Visit my currency converter react](https://patryk-solinski.github.io/currency-converter-react/)
