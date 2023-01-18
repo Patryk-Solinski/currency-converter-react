@@ -1,16 +1,8 @@
-
 .container {
-    overflow-x: auto;
-    max-width: 800px;
-    
     padding: 20px;
-    margin: auto;
     background-color: hsl(240, 44%, 93%, 0.98);
     border-radius: 10px;
-} 
-@media (max-width: 767px) {
-    .container {
-        height: 800px;
-    }
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
 }
-
