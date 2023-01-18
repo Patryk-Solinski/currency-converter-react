@@ -12,11 +12,11 @@ const Form = () => {
 
 const onFormSubmit = (event) => {
     event.preventDefault();
-    console.log(`${amount}`);
+    console.log(`${amount} ${currency}`);
 };
 
-return(
-<form className="form" onFormSubmit={onFormSubmit}>
+return (
+<form className="form" onSubmit={onFormSubmit}>
     <fieldset className="form__fieldset">
         <p>
             <label>
