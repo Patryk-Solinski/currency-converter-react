@@ -3,7 +3,7 @@
 ![To-do list react](https://github.com/Patryk-Solinski/currency-converter-react/blob/master/public/currency-converter3.png?raw=true)
 
 ## Demo
-[Visit my currency converter react](https://solinskideveloper.github.io/currency-converter-react/
+[Visit my currency converter react](https://solinskideveloper.github.io/currency-converter-react/)
 
 ## Description
 This is another version of currency converter created as part of YouCode course. I have created a simple currency conventer that allows you to exchange Polish currency PLN into some other currencies.
