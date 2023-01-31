@@ -1,10 +1,19 @@
 import { useEffect, useState } from "react"
 import "./style.css";
-import { formattedDate } from "./fromattedDate";
+
 
 const Clock = () => {
+    const formattedDate = 
+    {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+    };
+   
     const [date, setDate] = useState(new Date());
-
 
     useEffect(() => {
         const intervalId = setInterval(() => {
