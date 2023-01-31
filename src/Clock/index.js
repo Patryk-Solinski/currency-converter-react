@@ -16,13 +16,18 @@ const Clock = () => {
 
     return (
         <p>
-            Dziś jest {""}
-            {currentDate.toLocaleString(undefined,{
-                weekday:"long",
+            Dzisiaj jest {""}
+            {currentDate.toLocaleString(undefined, {
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
             }
-                )}
+            )}
         </p>
-    )
+    );
 };
 
 export default Clock;
