@@ -17,7 +17,7 @@ const Clock = () => {
     }, []);
 
     return (
-        <p>
+        <p className="clock">
             Dzisiaj jest {""}
             {date.toLocaleString(undefined, formattedDate)}
         </p>
