@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "./style.css";
+import { CurrentClock } from "./styled";
 
 
 const Clock = () => {
@@ -26,10 +26,10 @@ const Clock = () => {
     }, []);
 
     return (
-        <p className="clock">
+        <CurrentClock>
             Dzisiaj jest {""}
             {date.toLocaleString(undefined, formattedDate)}
-        </p>
+        </CurrentClock>
     );
 };
 

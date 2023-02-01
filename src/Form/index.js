@@ -1,7 +1,7 @@
-import "./style.css";
+import { Label, Field, Text, FieldSet, Select } from "./styled";
 import { useState } from "react";
-import { currencies } from "../currencies";
-import Result from "../Result";
+import { currencies } from "./currencies";
+import Result from "./Result";
 
 const Form = () => {
     const [amount, setAmount] = useState("");
@@ -14,32 +14,31 @@ const Form = () => {
     };
 
     return (
-        <form className= "form" onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
+        <form onSubmit={onFormSubmit}>
+            <FieldSet>
                 <p>
-                    <label className="form__label">
-                        <span className="form__labelText">
+                    <Label>
+                        <Text>
                             Kwota do wymainy (PLN):
-                        </span>
-                        <input
+                        </Text>
+                        <Field
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
-                            className="form__field"
                             type="number"
                             step="0.01"
                             min="0.01"
                             required
                         />
-                    </label>
+                    </Label>
                 </p>
                 <p>
-                    <label className="form__label">
-                        <span className="form__labelText">
-                            Waluta:</span>
-                        <select
+                    <Label>
+                        <Text>
+                            Waluta:
+                        </Text>
+                        <Select
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
-                            className="form__field"
                         >
                             {currencies.map((currency) => (
                                 <option
@@ -48,10 +47,10 @@ const Form = () => {
                                     {currency.name}
                                 </option>
                             ))}
-                        </select>
-                    </label>
+                        </Select>
+                    </Label>
                 </p>
-            </fieldset>
+            </FieldSet>
             <Result
                 amount={amount}
                 rate={rate}
