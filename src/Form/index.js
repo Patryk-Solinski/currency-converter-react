@@ -1,4 +1,4 @@
-import { Label, Field, Text, FieldSet, Select } from "./styled";
+import { Label, Field, Text, FieldSet } from "./styled";
 import { useState } from "react";
 import { currencies } from "./currencies";
 import Result from "./Result";
@@ -8,13 +8,8 @@ const Form = () => {
     const [currency, setCurrency] = useState(currencies[0].code);
     const rate = currencies.find(({ code }) => code === currency).rate;
 
-    const onFormSubmit = (event) => {
-        event.preventDefault();
-        console.log(`${amount} ${currency}`);
-    };
-
     return (
-        <form onSubmit={onFormSubmit}>
+        <form>
             <FieldSet>
                 <p>
                     <Label>
@@ -36,7 +31,8 @@ const Form = () => {
                         <Text>
                             Waluta:
                         </Text>
-                        <Select
+                        <Field
+                            as="select"
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
                         >
@@ -47,7 +43,7 @@ const Form = () => {
                                     {currency.name}
                                 </option>
                             ))}
-                        </Select>
+                        </Field>
                     </Label>
                 </p>
             </FieldSet>
