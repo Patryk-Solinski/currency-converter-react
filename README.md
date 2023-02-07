@@ -20,7 +20,7 @@ This project was bootstrapped with [Create React App.](https://github.com/facebo
 - HTML
 - CSS Grid
 - Normalize.css
-- BEM convention
+- Styled-components
 - JavaScript
 - ES6+ features
 - GIT
