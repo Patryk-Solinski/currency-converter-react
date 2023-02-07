@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import  background  from "./backgroundTower.jpg";
 
 export const GlobalStyle = createGlobalStyle`
 html {
@@ -17,7 +18,7 @@ html {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("../public/backgroundTower.jpg");
+  background-image: url("${background}");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
