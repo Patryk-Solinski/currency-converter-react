@@ -12,14 +12,9 @@ export const Field = styled.input`
     border-radius: 5px;
     border: 1px solid #ccc;
 `;
-export const Select = styled.select`
-    padding: 3px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-`;
 
 export const Text = styled.span`
- padding: 5px;
+    padding: 5px;
 `;
 
 export const FieldSet = styled.fieldset`
