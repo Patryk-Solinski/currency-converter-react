@@ -1,12 +1,11 @@
 import { Label, Field, Text, FieldSet } from "./styled";
 import { useState } from "react";
-
 import Result from "./Result";
 
 const Form = ({ ratesData }) => {
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState("EUR");
-    
+    const rate = ratesData.rates[currency];
 
     return (
         <form>
@@ -51,7 +50,7 @@ const Form = ({ ratesData }) => {
             </FieldSet>
             <Result
                 amount={amount}
-                rateData={ratesData.rates}
+                rate={rate}
                 currency={currency}
             />
         </form>
