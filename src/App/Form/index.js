@@ -6,6 +6,23 @@ const Form = ({ ratesData }) => {
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState("EUR");
     const rate = ratesData.rates[currency];
+    const status = ratesData.status;
+
+    if (["loading", "error"].includes(status)) {
+        return (
+            <p>
+                <Label>
+                    <Text>
+                    {status === "loading" ?
+                            "Ładujemy potrzebne dane 😁" :
+                            `Przepraszamy, ale coś poszło nie tak😞 
+                        Sprawdź połączenie z internetem, albo spróbuj później.`
+                        }
+                    </Text>
+                </Label>
+            </p>
+        );
+    };
 
     return (
         <form>
