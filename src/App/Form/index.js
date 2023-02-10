@@ -1,12 +1,12 @@
 import { Label, Field, Text, FieldSet } from "./styled";
 import { useState } from "react";
-import { currencies } from "./currencies";
+
 import Result from "./Result";
 
-const Form = () => {
+const Form = ({ ratesData }) => {
     const [amount, setAmount] = useState("");
-    const [currency, setCurrency] = useState(currencies[0].code);
-    const rate = currencies.find(({ code }) => code === currency).rate;
+    const [currency, setCurrency] = useState("EUR");
+    
 
     return (
         <form>
@@ -36,20 +36,22 @@ const Form = () => {
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
                         >
-                            {currencies.map((currency) => (
+                            {Object.keys(ratesData.rates).map((rates => (
                                 <option
-                                    key={currency.code}
-                                    value={currency.code}>
-                                    {currency.name}
+                                    key={rates}
+                                    value={rates}
+                                >
+                                    {rates}
                                 </option>
-                            ))}
+
+                            )))}
                         </Field>
                     </Label>
                 </p>
             </FieldSet>
             <Result
                 amount={amount}
-                rate={rate}
+                rateData={ratesData.rates}
                 currency={currency}
             />
         </form>
