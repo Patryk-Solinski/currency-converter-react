@@ -3,7 +3,7 @@ import { StyledFooter, Paragraph } from "./styled";
 const Footer = ({ ratesData }) => (
     <StyledFooter>
         <Paragraph>
-            Kursy walut według średniego kursu NBP z dn. {ratesData.date}
+            Kursy walut pobierane są z Europejskiego Banku Centralnego z dn. {ratesData.date}
         </Paragraph>
     </StyledFooter>
 );
