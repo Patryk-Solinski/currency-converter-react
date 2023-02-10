@@ -10,7 +10,7 @@ export const Label = styled.label`
 export const Field = styled.input`
     padding: 3px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid ${({theme}) => theme.color.silver};
 `;
 
 export const Text = styled.span`
@@ -19,7 +19,7 @@ export const Text = styled.span`
 
 export const FieldSet = styled.fieldset`
     border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 5px 5px 5px hsl(0, 0%, 60%);
+    border: 1px solid ${({theme}) => theme.color.silver};
+    box-shadow: 5px 5px 5px ${({theme}) => theme.color.concord};
     margin: 20px 0;
 `;

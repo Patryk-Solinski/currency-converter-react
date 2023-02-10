@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.main`
     padding: 20px;
-    background-color: hsl(240, 44%, 93%, 0.98);
+    background-color: ${({theme}) => theme.color.blueHaze};
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 550px;
     text-align: center;
     margin: auto;
 `;
