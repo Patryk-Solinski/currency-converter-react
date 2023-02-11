@@ -7,6 +7,7 @@ import { useCurrencies } from "../useCurrencies";
 
 function App() {
   const ratesData = useCurrencies();
+  
   return (
     <Container>
       <Clock />
